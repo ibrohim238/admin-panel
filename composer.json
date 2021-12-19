@@ -12,7 +12,9 @@
         "laravel/framework": "^8.65",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "^3.4"
+        "laravel/ui": "^3.4",
+        "spatie/laravel-medialibrary": "^9.11",
+        "spatie/laravel-permission": "^5.4"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.10",
@@ -36,6 +38,11 @@
         }
     },
     "scripts": {
+        "ide": [
+            "php artisan ide-helper:generate",
+            "php artisan ide-helper:models",
+            "php artisan ide-helper:meta"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"

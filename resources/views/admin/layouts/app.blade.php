@@ -19,19 +19,16 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
     <!-- Main Header -->
-    @include('admin.layouts.parts.header')
-
+    @include('admin.layouts.parts.nav')
     <!-- Left side column. contains the logo and sidebar -->
     @include('admin.layouts.parts.sidebar')
 
-<!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+        @include('admin.layouts.parts.header')
         <section class="content">
             @yield('content')
         </section>
     </div>
-
-    <!-- Main Footer -->
     @include('admin.layouts.parts.footer')
 </div>
 
