@@ -5,3 +5,9 @@
         <p>Пользователи</p>
     </a>
 </li>
+<li class="nav-item">
+    <a href="{{ route('home') }}" class="nav-link">
+        <i class="fas fa-arrow-left"></i>
+        <p>Вернуться</p>
+    </a>
+</li>
