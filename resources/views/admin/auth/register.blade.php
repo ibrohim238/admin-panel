@@ -1,4 +1,4 @@
-@extends('admins.layouts.auth')
+@extends('admin.layouts.auth')
 
 @section('title', 'Регистрация')
 

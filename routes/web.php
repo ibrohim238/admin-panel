@@ -16,8 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', HomeController::class)->name('home');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
+Route::group([
+    'prefix' => 'admin',
+    'as' => 'admin.',
+    'middleware' => 'role:admin',
+], function() {
+    require ('admins.php');
+});

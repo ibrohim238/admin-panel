@@ -11,8 +11,9 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(RolesAndPermissionsSeeder $rolesAndPermissionsSeeder)
     {
         // \App\Models\User::factory(10)->create();
+        $rolesAndPermissionsSeeder->run();
     }
 }
